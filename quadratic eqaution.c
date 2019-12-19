@@ -36,7 +36,8 @@ else if(d<0)
 
 {
 
-    printf("bhag yahan se");
+    printf("roots are iamginary
+           ");
 
 
 
