@@ -2,18 +2,13 @@
 #include<conio.h>
 int main()
 {
-    int i,j,n;
-    printf("Enter the number of row:");
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int i;
+    for(i=1;i<=100;i++)
     {
-        for(j=1;j<=i;j++)
-            if((i+j)%2==0)
-                printf("1");
-            else
-                printf("0");
-        printf("\n");
+        if(i%2==0)
+        {
+            printf("\n%d",i);
+        }
     }
     return 0;
 }
-

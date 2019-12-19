@@ -1,14 +1,18 @@
-/*what is the area of equilateral traingle if length of side is given by the keyboard*/
-
-
 #include<stdio.h>
 #include<conio.h>
 int main()
 {
-    float a,ar;
+    int i,n,n1,a;
     printf("Enter the number:");
-    scanf("%f",&a);
-    ar=(sqrt(3)/4)*a*a;
-    printf("%f is area",ar);
+    scanf("%d",&n);
+    n=n1;
+    while(n>0)
+    {
+        a=n%10;
+        n=n/10;
+
+    }
+    printf("%d %d",a,n);
     return 0;
+
 }

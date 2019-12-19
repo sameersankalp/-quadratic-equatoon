@@ -2,16 +2,14 @@
 #include<conio.h>
 int main()
 {
-    int a;
-    printf("Enter the numbers:");
-    scanf("%d",&a);
-
-    if(a>0)
-        printf("the number is positive");
-    if(a<0)
-         printf("the number is negative");
-    if(a==0)
-         printf("the number is zero");
+    int i;
+    for(i=1;i<=100;i++)
+    {
+        if(i%2!=0)
+        {
+            printf("\n%d",i);
+        }
+    }
     return 0;
-
 }
+

@@ -1,14 +1,17 @@
+/*write a program to find the sum of all natural number*/
 #include<stdio.h>
 #include<conio.h>
 int main()
 {
-    int a;
-    printf("Enter the number");
-    scanf("%d",&a);
-    if((a%5==0)&&(a%11==0))
-        printf("yes it is divisible by 11 and 5");
-        else
-        printf("yes it is not divisible by 11 and 5");
-        return 0;
+    int i,n,sum;
+    i=1;
+    sum=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        sum=sum+i;
 
+    }
+    printf("%d",sum);
+    return 0;
 }

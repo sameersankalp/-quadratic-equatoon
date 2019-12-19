@@ -1,17 +1,17 @@
- /*Write a C program to input any alphabet and check whether it is vowel or consonant.*/
-
 #include<stdio.h>
 #include<conio.h>
-#include<ctype.h>
 int main()
 {
-    char ch,ch1;
-    printf("Enter the alphabet:");
-    scanf("%c",&ch);
-    ch1=tolower(ch);
-    if(ch1=='a'||ch1=='e'||ch1=='i'||ch=='o'||ch=='u')
-        printf("%c is the vowel",ch);
-    else
-         printf("%c is the consonant",ch);
+    int n,n1,count=0;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+    n1=n;
+    while(n>0)//for( ;n>0;)
+    {
+        n=n/10;
+        count++;
+    }
+    printf("no. of digits in %d=%d",n1,count);
     return 0;
+
 }

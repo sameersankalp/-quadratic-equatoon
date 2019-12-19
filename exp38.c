@@ -1,53 +1,33 @@
-/*
-
-6: Write a program to calculate the salary as per the following table:     Gender Years of Service Qualifications Salary
-Male
->= 10 Post-Graduate 15000 >= 10 Graduate 10000 < 10 Post-Graduate 10000 < 10 Graduate 7000
-Female
->= 10
-
-Post-Graduate 12000
->= 10 Graduate 9000 < 10 Post-Graduate 10000 < 10 Graduate 6000  */
-
- #include<stdio.h>
+#include<stdio.h>
 #include<conio.h>
 int main()
 {
-    char gender,qual;
-    int sal,yos;
-    printf("Enter the gender(m/f) ,qual(p/g),yos");
-    scanf("%c %c %d",&gender,&qual,&yos);
-    if(gender=='m')
-    {
-        if(yos>=10)
-        {
-            if(qual=="pg")
-                printf("salary is 15000");
-            else
-                printf("slary is 10000");
-        }else
-        {
-            if(qual=="pg")
-                printf("salary is 10000");
-            else
-                printf("salary is 7000");
-        }
-    }else
+    int i,j,n,n1,n2,n3,sum=0,p1=1,count,p,a;
+    printf("Enter the no.");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
     {
 
-        if(yos>=10)
+        n3=n2=n1=i;
+        count=0;
+        sum=0;
+        while(n2>0)
         {
-            if(qual=="pg")
-                printf("salary is 12000");
-            else
-                printf("slary is 9000");
-        }else
-        {
-            if(qual=="pg")
-                printf("salary is 10000");
-            else
-                printf("salary is 6000");
+            count++;
+            n2=n2/10;
         }
+        while(n1>0)
+        {
+            p=1;
+            a=n1%10;
+            for(j=1;j<=count;j++)
+                p=p*a;
+            sum=sum+p;
+            n1=n1/10;
 
+        }
+        if(i==sum)
+            printf("\n%d is the armstrong number",i);
     }
+    return 0;
 }

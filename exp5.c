@@ -2,36 +2,17 @@
 #include<conio.h>
 int main()
 {
-    int n,n1,a,rev=0;
-    printf("Enter the number");
-    scanf("%d",&n);
-    n=n1;
-    a=n1%10;
-    n1=n1/10;
-    rev=rev+a*10000;
+    int i=1,a,b,c;
+    for(i=1;i<=500;i++)
+    {
+        a=i%10;
+        b=i%100;
+        b=b/10;
+        c=i/100;
+        if(a*a*a+b*b*b+c*c*c==i)
+            printf("\n%d is the armstrong number",i);
 
-    a=n1%10;
-    n1=n1/10;
-    rev=rev+a*1000;
 
-    a=n1%10;
-    n1=n1/10;
-    rev=rev+a*100;
-
-    a=n1%10;
-    n1=n1/10;
-    rev=rev+a*10;
-
-    a=n1%10;
-    n1=n1/10;
-    rev=rev+a*1;
-
-    if(n==rev)
-        printf("both are equal");
-    else
-        printf("both are not equal");
+    }
     return 0;
-
-
-
 }

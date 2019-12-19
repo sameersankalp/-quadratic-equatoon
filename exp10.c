@@ -2,15 +2,15 @@
 #include<conio.h>
 int main()
 {
-    int i,j,n;
-    printf("Enter the number of row:");
+    int i,n;
+    printf("Enter value of n");
     scanf("%d",&n);
+    i=1;
     for(i=1;i<=n;i++)
     {
-        for(j=1;j<=i;j++)
-            printf(" %d ",i);
-        printf("\n");
+        printf("\n%d",i);
     }
     return 0;
-}
 
+
+}

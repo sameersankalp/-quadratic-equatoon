@@ -1,16 +1,17 @@
-/* Write a C program to input angles of a triangle and check whether triangle is valid or not. */
-
 #include<stdio.h>
 #include<conio.h>
 int main()
 {
-    int a,b,c,d;
-    printf("enter the angles of triangle:");
-    scanf("%d%d%d",&a,&b,&c);
-    d=a+b+c;
-    if(d==180&&a>0&&b>0&&c>0)
-        printf("valid");
-    else
-        printf("not valid");
-    return 0;
-}
+    int n,n1,a,rev=0;
+    printf("Enter the number:");
+    scanf("%d",&n);
+    n1=n;
+    while(n>0)
+    {
+        a=n%10;
+        rev=rev*10+a;
+        n=n/10;
+    }
+    if(n1==rev)
+        printf("%d is rev no.",n1);
+        return 0;

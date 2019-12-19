@@ -2,14 +2,25 @@
 #include<conio.h>
 int main()
 {
-    int i,j,n;
-    printf("Enter the number of row:");
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int pos=0,neg=0,zero=0,num;
+    char ans='y';
+    while(ans=='y'||ans=='Y')
     {
-        for(j=1;j<=i;j++)
-            printf(" * ");
-        printf("\n");
+        printf("Enter the value of num:");
+        scanf("%d",&num);
+        if(num>0)
+            pos++;
+        if(num<0)
+            neg++;
+        if(num==0)
+            zero++;
+        printf("do u want to enter more number");
+        scanf("  %c",&ans);
     }
+
+    printf("\nno. of zeros =%d",zero);
+    printf("\nno. of positive =%d",pos);
+    printf("\nno. of negative =%d",neg);
     return 0;
+
 }

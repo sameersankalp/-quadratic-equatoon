@@ -2,12 +2,19 @@
 #include<conio.h>
 int main()
 {
-    int a,b,c;
-    printf("Enter the side of triangle:");
-    scanf("%d%d%d",&a,&b,&c);
-    if((c>(a+b))||(b>(a+c))||(a>(b+c)))
-        printf("this is valid");
+    int n,n1,a,rev=0;
+    printf("Enter the number:");
+    scanf("%d",&n);
+    n1=n;
+    while(n>0)
+    {
+        a=n%10;
+        rev=rev*10+a;
+        n=n/10;
+    }
+    if(n1==rev)
+        printf("%d is palindron",n1);
     else
-        printf("not valid");
+        ("%d is not palindron",n1);
     return 0;
 }
