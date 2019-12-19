@@ -1,14 +1,16 @@
- #include<stdio.h>
-#include<conio.h>
+#include<stdio.h>
 int main()
 {
-    int a,b,i,p=1;
-    printf("Enter the value of a and b:");
-    scanf("%d %d",&a,&b);
-    for(i=1;i<=b;i++)
+    int a[5],i,sum=0;
+    printf("Enter the value of array;");
+    for(i=0;i<=4;i++)
     {
-        p=p*a;
+        scanf("%d",&a[i]);
     }
-    printf("%d^%d=%d",a,b,p);
+    for(i=0;i<=4;i++)
+    {
+        sum=sum+a[i];
+    }
+    printf("sum=%d",sum);
     return 0;
 }

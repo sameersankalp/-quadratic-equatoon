@@ -1,16 +1,23 @@
 #include<stdio.h>
-#include<conio.h>
+
 int main()
 {
-    int i,n,f=1;
-
-    printf("Enter the value of n:");
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int a[10],i;
+    printf("Enter the value of array:");
+    for(i=0;i<=9;i++)
     {
-        f=f*i;
-    }
-    printf("factorial of given number is %d",f);
-    return 0;
+        scanf("%d",&a[i]);
 
+    }
+    for(i=1;i<=9;i++)
+    {
+        printf("%d",a[i]);
+    }
+     for(i=1;i<=9;i++)
+    {
+       if(a[i]<0)
+       printf(" neg no. is
+              %d",a[i]);
+       return 0;
+    }
 }

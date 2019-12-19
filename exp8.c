@@ -1,17 +1,22 @@
-
-
-
-
 #include<stdio.h>
-#include<conio.h>
 int main()
 {
-    int a;
-    printf("Enter the value:");
-    scanf("%d",&a);
-    if(a%2==0)
-        printf(" %d is even",a);
-        else
-        printf(" %d is odd",a);
-    return 0;
+
+    int a[5],b[5],i;
+    printf("Enter the value of array:");
+    for(i=0;i<=4;i++)
+    {
+        scanf("%d",&a[i]);
+
+    }
+
+   for(i=0;i<=4;i++)
+   {
+       b[i]=a[i];
+       printf("\n%d",b[i]);
+
+   }
+
+   return 0;
 }
+

@@ -1,24 +1,32 @@
 #include<stdio.h>
-#include<conio.h>
+#define max 10
 int main()
 {
-     int i,j,f=1,n;
-    float sum=0;
-    printf("Enter the no.");
+    int i,j,pos,a[max],n,data,k;
+    printf("Enter the size of array:");
     scanf("%d",&n);
-    i=1;
-    while(i<=n)
-    {   f=1;
-        for(j=1;j<=i;j++)
-        f=f*j;
-        if(i%2!=0)
-         sum=sum + f/i;
-        else
-         sum=sum-f/i;
-        i++;
+    printf("Enter the array element:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+
     }
+   for(i=0;i<n;i++)
+   {
+    data=a[i];
+   for(j=i+1;j<n;j++)
+   {
+       if(data==a[j])
+       {
+           for(k=j;k<n-1;k++)
+            a[k]=a[k+1];
+           n=n-1;
+           j=j-1;
+       }
+   }
+   }
+   for(i=0;i<n;i++)
+   printf("%d",a[i]);
 
-    printf("%.2f",sum);
-    return 0;
-
+   return 0;
 }
