@@ -2,14 +2,23 @@
 #include<conio.h>
 int main()
 {
-    int i;
-    for(i=1;i<=100;i++)
-    {
+     int i,j,f=1,n;
+    float sum=0;
+    printf("Enter the no.");
+    scanf("%d",&n);
+    i=1;
+    while(i<=n)
+    {   f=1;
+        for(j=1;j<=i;j++)
+        f=f*j;
         if(i%2!=0)
-        {
-            printf("\n%d",i);
-        }
+         sum=sum + f/i;
+        else
+         sum=sum-f/i;
+        i++;
     }
-    return 0;
-}
 
+    printf("%.2f",sum);
+    return 0;
+
+}

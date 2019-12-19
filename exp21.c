@@ -1,15 +1,17 @@
-/* Write a C program to check whether a character is uppercase or lowercase alphabet. */
-
 #include<stdio.h>
-#include<conio.h>
 int main()
 {
-    int ch;
-    printf("Enter the value:");
-    scanf("%c",&ch);
-    if(ch>=65&&ch<=90)
-        printf("this is uppercase");
-     else if(ch>=97&&ch<=122)
-        printf("this is lowercase");
-     return 0;
+    int i,j,n,sum=0,a,b;
+    printf("Enter the number:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        a=i+1;
+        if(i%2==0)
+        sum=sum-i/a;
+        else
+        sum=sum+i/a;
+    }
+    printf("%.2f",sum);
+    return 0;
 }

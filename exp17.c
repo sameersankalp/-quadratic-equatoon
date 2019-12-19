@@ -2,20 +2,22 @@
 #include<conio.h>
 int main()
 {
-    int i,n,sum=0;
-    printf("Enter the value of n");
+    int i,j,f=1,n,p=1;
+    float sum=0;
+    printf("Enter the number:");
     scanf("%d",&n);
-
-    for(i=1;i<=n;i++)
+    i=1;
+    while(i<=n)
     {
-        if(i%2!=0)
-        {
-          sum=sum+i;
-        }
-
+        f=1;
+        p=1;
+        for(j=1;j<=i;j++)
+            f=f*j;
+        for(j=1;j<=i;j++)
+            p=p*i;
+        sum=sum+(float)(p)/f;
+        i++;
     }
-     printf("%d",sum);
+    printf("%f is the sum of series",sum);
     return 0;
-
 }
-

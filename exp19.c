@@ -1,17 +1,22 @@
 #include<stdio.h>
-#include<conio.h>
 int main()
 {
-    int n,n1,count=0;
-    printf("Enter the value of n:");
+   int i,j,n,a,b;
+   float sum=0;
+    printf("Enter the number:");
     scanf("%d",&n);
-    n1=n;
-    while(n>0)//for( ;n>0;)
+    for(i=1;i<=n;i++)
     {
-        n=n/10;
-        count++;
-    }
-    printf("no. of digits in %d=%d",n1,count);
-    return 0;
+        a=1;
+        b=1;
+        for(j=1;j<=2;j++)
+            a=a*i;//power
+        for(j=1;j<=i;j++)
+            b=b*j;//factorial
 
+                sum=sum+(float)a/b;
+    }
+    printf("%.2f",sum);
+    return 0;
 }
+

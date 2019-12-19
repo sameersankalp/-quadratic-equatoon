@@ -1,19 +1,24 @@
 #include<stdio.h>
-#include<conio.h>
 int main()
 {
-    int i,n,sum=0;
-    printf("Enter the value of n");
+    int n,i,j,a=1;
+    float sum=0;
+    printf("Enter the number:");
     scanf("%d",&n);
-
     for(i=1;i<=n;i++)
     {
-        if(i%2==0)
-        {
-          sum=sum+i;
-        }
-        printf("%d",sum);
+        a=1;
+       for(j=1;j<=i;j++)
+       {
+           a=a*i;
+       }
+       if(i%2==0)
+            sum=sum-(float)a/i;
+             else
+            sum=sum+(float)a/i;
     }
-    return 0;
 
+    printf("%.2f",sum);
+    return 0;
 }
+

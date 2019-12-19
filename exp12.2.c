@@ -12,7 +12,10 @@
          f=1;
          for(j=1;j<=i;j++)
             f=f*j;
+            if(i%2!=0)
          sum=sum+(float)(i)/f;
+         else
+        sum=sum-(float)(i)/f;
          i++;
      }
      printf("sum of series is %.2f",sum);
